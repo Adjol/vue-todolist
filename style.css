@@ -6,6 +6,8 @@
 .inp_group {
     width: 50%;
     margin: 3rem auto 0;
+    display: flex;
+    justify-content: space-around;
 }
 
 
@@ -28,4 +30,8 @@
 .fa-x {
     width: 2rem;
     height: 2rem;
+}
+
+.toDoTask {
+    text-decoration: none;
 }

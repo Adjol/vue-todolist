@@ -16,8 +16,12 @@
 
     <div id="app">
 
+
+        <!-- input group -->
+
         <div class="inp_group">
-            <input type="text" placeholder="Inserisci nuovo task" v-model="newTask">
+            <input type="text" placeholder="Inserisci nuovo task" v-model="newTask" @keyup.enter="addTask">
+            
             <button @click="addTask">Inserisci Task</button>
         </div>
 

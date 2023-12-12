@@ -25,7 +25,9 @@ createApp({
             ]
         }
     },
+
     methods: {
+// inserisco nuove voci in lista
         addTask() {
             this.todos.unshift({
                 text: this.newTask,
@@ -33,14 +35,16 @@ createApp({
             });
             this.newTask = "";
         },
+        
+//inverte stato done in ciascun object
         doneTask(index) {
             this.todos[index].done = true;
         },
+//rimuove una voce dal elenco con 'x'
+
         removeTask(index) {
             this.todos.splice(index, 1);
-        }
+        },
     }
 }).mount("#app");
 
-
-//Visualizzare a fianco ad ogni item ha una “x”: cliccando su di essa, il todo viene rimosso dalla lista.
