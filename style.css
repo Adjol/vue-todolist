@@ -1,4 +1,31 @@
 .done {
     text-decoration: line-through;
-    
+}
+
+
+.inp_group {
+    width: 50%;
+    margin: 3rem auto 0;
+}
+
+
+
+
+
+.displayed_list {
+    width: 50%;
+    margin: 3rem auto 0;
+}
+
+
+
+
+.flex_it {
+    display: flex;
+    justify-content: space-between;
+}
+
+.fa-x {
+    width: 2rem;
+    height: 2rem;
 }

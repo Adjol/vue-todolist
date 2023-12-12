@@ -3,25 +3,36 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     
+    
+
     <link rel="stylesheet" href="style.css">
     <title>To do List</title>
 </head>
 <body>
 
     <div id="app">
-        <input type="text" placeholder="Inserisci nuovo task" v-model="newTask">
 
-        <button @click="addTask">Inserisci Task</button>
+        <div class="inp_group">
+            <input type="text" placeholder="Inserisci nuovo task" v-model="newTask">
+            <button @click="addTask">Inserisci Task</button>
+        </div>
 
         <!-- visualizzo su schermo toDoList -->
-        <ul>
-            <li v-for="(todo, index) in todos" :key="index" @click="doneTask(index)">
+        <ul class="displayed_list">
+            <li class="flex_it" v-for="(todo, index) in todos" :key="index" >
 
-                <div :class="{ 'done' : todo.done }">
+
+                <!-- cliccando applico la classe 'done' -->
+                <div @click="doneTask(index)" :class="{ 'done' : todo.done }">
+
                     {{ todo.text }}
+                    
                 </div>
-
+                <i class="fa-solid fa-x" @click="removeTask(index)"></i>
             </li>
         </ul>
     </div>

@@ -19,7 +19,8 @@ createApp({
                 },
                 {
                     text: 'zzzzzzzzzzzzz',
-                    done: false
+                    done: false,
+                   
                 },
             ]
         }
@@ -33,7 +34,13 @@ createApp({
             this.newTask = "";
         },
         doneTask(index) {
-            this.todos[index].done = !this.todos[index].done;
+            this.todos[index].done = true;
+        },
+        removeTask(index) {
+            this.todos.splice(index, 1);
         }
     }
 }).mount("#app");
+
+
+//Visualizzare a fianco ad ogni item ha una “x”: cliccando su di essa, il todo viene rimosso dalla lista.
