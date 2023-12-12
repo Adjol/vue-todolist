@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <link rel="stylesheet" href="style.css">
+    <title>To do List</title>
+</head>
+<body>
+
+    <div id="app">
+        <input type="text" placeholder="Inserisci nuovo task" v-model="newTask">
+
+        <button @click="addTask">Inserisci Task</button>
+
+        <!-- visualizzo su schermo toDoList -->
+        <ul>
+            <li v-for="(todo, index) in todos" :key="index" @click="doneTask(index)">
+
+                <div :class="{ 'done' : todo.done }">
+                    {{ todo.text }}
+                </div>
+
+            </li>
+        </ul>
+    </div>
+
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
