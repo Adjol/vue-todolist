@@ -37,8 +37,16 @@ createApp({
         },
         
 //inverte stato done in ciascun object
+
+        
+
         doneTask(index) {
-            this.todos[index].done = true;
+            if (this.todos[index].done === false){
+                this.todos[index].done = true;
+            } else {
+                this.todos[index].done = false;
+            }
+            
         },
 //rimuove una voce dal elenco con 'x'
 
